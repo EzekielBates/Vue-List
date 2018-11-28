@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script defer src="app.js"></script>
+    </header>
+    <body>
+        <div id="list">
+            <div v-for="task in tasks">
+                {{task}}<span @click="removeFromList(task)"> remove this</span>
+            </div>
+            <input v-model="taskToAdd">
+            <button v-on:click="addToList">Add To List</button>
+            <p>{{numItems}}</p>
+        </div>
+    </body>
+</html>
